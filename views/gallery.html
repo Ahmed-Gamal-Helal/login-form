@@ -1,0 +1,21 @@
+<div class="ui">
+    <div class="ui container">   
+        <div class="ui divider"></div>     
+        <table class="ui striped table">
+            <thead>
+            <tr>
+                <th>User Name</th>
+                <th>Password</th>
+            </tr>
+            <tr ng-repeat="contact in details">
+                <td>{{contact.name}}</td>
+                <td>{{contact.password}}</td>
+                <td>
+                    <button class="tiny ui button" ng-click="editItem($index)">Edit</button>
+                    <button class="tiny ui button" ng-click="removeItem($index)">Remove</button>
+                </td>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
