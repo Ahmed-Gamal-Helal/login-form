@@ -1,4 +1,16 @@
 contactGallery.controller('loginController', ['$scope', '$timeout', '$location', function ($scope, $timeout, $location) {
+    contactGallery.controller('loginController', function() {
+        $scope.details = [];
+
+        $scope.add = function () {
+            $scope.details.push({
+                name : $scope.name,
+                phone : $scope.phone,
+                email : $scope.email
+            });
+        }; 
+    });
+    
     $scope.login = {
         userName: '',
         password: ''
@@ -7,7 +19,7 @@ contactGallery.controller('loginController', ['$scope', '$timeout', '$location',
 
     $scope.loginAuth = loginAuth;
 
-
+    
 
     $timeout(function () {
         $('.ui.form')
@@ -44,11 +56,14 @@ contactGallery.controller('loginController', ['$scope', '$timeout', '$location',
         console.log($scope.login);
     }
 
-    $scope.submit = function() {
-        var uname = $scope.username;
-        var password = $scope.password;
-        if($scope.username == 'admin' && $scope.password == 'adminss'){
-            $location.path('/gallery');
-        }
-    };
+       
+
+   // $scope.submit = function() {
+     //   var uname = $scope.username;
+       // var password = $scope.password;
+         //   if($scope.username == 'admin' && $scope.password == 'adminss'){
+           //     $location.path('/gallery');
+        //}
+    //};
+
 }]);

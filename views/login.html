@@ -3,7 +3,7 @@
     </div>
 
     <div class="ui container">
-        <form class="ui form" action="/" id="myLogin"> 
+        <form class="ui form" ng-show="visible" ng-submit="add()" action="/" id="myLogin"> 
             <div class="field">
                 <label>User Name</label>
                 <input type="text" name="userName" placeholder="User Name" ng-model="login.userName" id="username"/>
@@ -14,7 +14,7 @@
             </div>
             <div class="field">
                 <div class="ui error message"></div>
-                <button ng-click="submit()" routerLink="/gallery" class="ui primary submit button" type="submit">Submit</button>
+                <button type = "submit" ng-click="submit() add()" routerLink="/gallery" class="ui primary submit button" type="submit">Submit</button>
             </div>
         </form>
     </div>
