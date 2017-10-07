@@ -1,4 +1,7 @@
 contactGallery.controller('galleryController', ['$scope', function ($scope) {
-    console.log('gallery');
+    $scope.details = [];
     
+    //$scope.removeItem = function (contact){
+      //  $scope.details.splice(contact, 1);
+    //};    
 }]);

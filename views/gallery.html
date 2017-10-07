@@ -8,13 +8,14 @@
                 <th>Password</th>
             </tr>
             <tr ng-repeat="contact in details">
-                <td>{{contact.name}}</td>
-                <td>{{contact.password}}</td>
+                <td>{{contact.login.userName}}</td>
+                <td>{{contact.login.password}}</td>
                 <td>
                     <button class="tiny ui button" ng-click="editItem($index)">Edit</button>
                     <button class="tiny ui button" ng-click="removeItem($index)">Remove</button>
                 </td>
             </tr>
+            
             </thead>
         </table>
     </div>

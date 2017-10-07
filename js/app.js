@@ -1,8 +1,9 @@
 var contactGallery = angular.module('contactGallery', ['ngRoute']);
 
-contactGallery.controller('contactGallery', function() {
+contactGallery.controller('contactGallery', function($scope) {
    // Start as not visible but when link is tapped it will show as true 
     $scope.visible = true;
+
 });
 
 contactGallery.config(function ($routeProvider, $locationProvider) {

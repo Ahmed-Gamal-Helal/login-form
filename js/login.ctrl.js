@@ -1,16 +1,23 @@
-contactGallery.controller('loginController', ['$scope', '$timeout', '$location', function ($scope, $timeout, $location) {
-    contactGallery.controller('loginController', function() {
-        $scope.details = [];
 
-        $scope.add = function () {
-            $scope.details.push({
-                name : $scope.name,
-                phone : $scope.phone,
-                email : $scope.email
-            });
-        }; 
-    });
+contactGallery.controller('loginController', function($scope,$location) {
     
+
+    $scope.add = function () {
+        $scope.details.push({
+            name : $scope.login.userName,
+            password : $scope.login.password
+        });
+    }; 
+        /*$scope.submit = function() {
+        var uname = $scope.username;
+        var password = $scope.password;
+            if(uname && password){
+                $location.path('/gallery');
+        }
+    };*/
+    });
+contactGallery.controller('loginController', ['$scope', '$timeout', '$location', function ($scope, $timeout, $location) {
+   
     $scope.login = {
         userName: '',
         password: ''
